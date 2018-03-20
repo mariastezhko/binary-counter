@@ -15,6 +15,7 @@
 		5A2D2C2720601A9E001A162E /* BinaryCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2C2620601A9E001A162E /* BinaryCounterTests.swift */; };
 		5A2D2C3220601A9E001A162E /* BinaryCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2C3120601A9E001A162E /* BinaryCounterUITests.swift */; };
 		5A2D2C4020601DC9001A162E /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2C3F20601DC9001A162E /* CustomCell.swift */; };
+		5A2D2CB6206082FE001A162E /* CustomCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2CB5206082FE001A162E /* CustomCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5A2D2C3120601A9E001A162E /* BinaryCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryCounterUITests.swift; sourceTree = "<group>"; };
 		5A2D2C3320601A9E001A162E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A2D2C3F20601DC9001A162E /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		5A2D2CB5206082FE001A162E /* CustomCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		5A2D2C0520601A9D001A162E = {
 			isa = PBXGroup;
 			children = (
+				5A2D2CB5206082FE001A162E /* CustomCellDelegate.swift */,
 				5A2D2C1020601A9E001A162E /* BinaryCounter */,
 				5A2D2C2520601A9E001A162E /* BinaryCounterTests */,
 				5A2D2C3020601A9E001A162E /* BinaryCounterUITests */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2D2CB6206082FE001A162E /* CustomCellDelegate.swift in Sources */,
 				5A2D2C1420601A9E001A162E /* ViewController.swift in Sources */,
 				5A2D2C4020601DC9001A162E /* CustomCell.swift in Sources */,
 				5A2D2C1220601A9E001A162E /* AppDelegate.swift in Sources */,

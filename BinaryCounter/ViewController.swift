@@ -9,7 +9,7 @@
 import UIKit
 import Darwin
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CustomCellDelegate {
     
     var nums = [Int]()
     var sum:Int = 0
@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         let n = Decimal(10)
+        //CustomCell.delegate = self
         
         for i in 0..<16 {
             //nums.append(Int(pow(n,i)))
@@ -43,14 +44,31 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+    func plusNumber(at indexPath: NSIndexPath?) {
+        if let ind = indexPath {
+            let num = nums[ind.row]
+            sum = sum + num
+            print(sum)
+            sumLabel.text = "\(sum)"
+        }
+    }
+    func minusNumber(at indexPath: NSIndexPath?) {
+        if let ind = indexPath {
+            let num = nums[ind.row]
+            sum = sum - num
+            print(sum)
+            sumLabel.text = "\(sum)"
+        }
+        
+    }
 
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
+        cell.delegate = self
+        cell.indexPath = indexPath as NSIndexPath
         cell.numberLabel.text = "\(nums[indexPath.row])"
         
         // return cell so that Table View knows what to draw in each row

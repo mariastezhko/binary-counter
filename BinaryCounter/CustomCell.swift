@@ -9,16 +9,22 @@
 import UIKit
 
 class CustomCell: UITableViewCell {
+    
+    weak var delegate: CustomCellDelegate?
+    var indexPath: NSIndexPath?
 
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var rightButton: UIButton!
     
     @IBAction func rightButtonPressed(_ sender: UIButton) {
+        delegate?.plusNumber(at: indexPath)
     }
     
     
     @IBAction func leftButtonPressed(_ sender: UIButton) {
+        print("Calling delegate \(indexPath)")
+        delegate?.minusNumber(at: indexPath)
     }
     
     override func awakeFromNib() {
